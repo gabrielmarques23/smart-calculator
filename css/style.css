@@ -1,39 +1,117 @@
 @charset "UTF-8";
 
-:root{
-    --font01 : "Teachers", sans-serif;
+:root {
+    --FontFamily-01: "Teachers", sans-serif;
+    --FontFamily-02: "Poppins", sans-serif;
+    --Web-Bg: #C1CFE7;
+
+    --CalcScrLinear-01: #cddbf3;
+    --CalcScrLinear-02: #e6ebfa;
+
+    --CalcBgLinear-01: #9db3d6;
+    --CalcBgLinear-02: #bbcceb;
+
+    --Symbols-color: var(--Bg-buttonEqual);
+    --ButtonEqual-bg: #245DC7;
+    --Buttons-bg: #e6ebfacc;
+    --Number-color: #0C1320;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
-    font-size: 62,5%;
+    font-size: 62, 5%;
     border: none;
     box-sizing: border-box;
 }
 
-html, body{
-    font-family: var(--font01);
-    font-weight: 100;
+body {
+    font-weight: 300;
+    font-family: var(--FontFamily-02);
 }
 
-#calculatorApp{
-    background: gray;
-    width: 30rem;
-    max-width: 40rem;
+#calculatorApp {
+    background-image: linear-gradient(to top, var(--CalcBgLinear-01), var(--CalcBgLinear-02) 40%);
+    font-family: var(--FontFamily-01);
+    width: 14.5rem;
+    max-width: 14.5rem;
+    height: 30rem;
+    display: grid;
+    align-content: stretch;
+    border-radius: 1rem;
+    padding-bottom: .5rem;
     margin: auto;
 }
 
- .calcScreen{
-    height: 3rem;
-
-}
-.calcButtons button{
-    width: 5rem;
-    height: 2rem;
+.calcScreen {
+    position: relative;
+    background-image: linear-gradient(to top, var(--CalcScrLinear-01), var(--CalcScrLinear-02));
+    height: 11.5rem;
     border-radius: 1rem;
+    padding: 0 1rem;
+    overflow: hidden;
 }
 
-.calcButtons button:hover{
-    background-color: color-mix(in lch longer hue, color percentage, color percentage);
+.centralizeScreen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#calcDisplay {
+    font-size: 2rem;
+    width: 100%;
+    text-align: right;
+    background: none;
+    border-block: none;
+    outline: none;
+}
+
+.bottomDisplay {
+    display: flex;
+    height: 2.5rem;
+    width: 100%;
+    border-top: .1rem solid var(--CalcScrLinear-02);
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.calcButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.numberButton {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.MathSymbButton {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.cleanButton {
+    color: red;
+    background: var(--Buttons-bg);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.calcButtons button {
+    font-family: var(--FontFamily-02);
+    background: var(--Buttons-bg);
+    width: 2.9rem;
+    height: 2.9rem;
+    margin: .2rem;
+    border-radius: .7rem;
+}
+
+div.calcButtons button:hover {
+    filter: brightness(107%);
 }
