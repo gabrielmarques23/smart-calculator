@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+:root{
+    --font01 : "Teachers", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 62,5%;
+    border: none;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: var(--font01);
+    font-weight: 100;
+}
+
+#calculatorApp{
+    background: gray;
+    width: 30rem;
+    max-width: 40rem;
+    margin: auto;
+}
+
+ .calcScreen{
+    height: 3rem;
+
+}
+.calcButtons button{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1rem;
+}
+
+.calcButtons button:hover{
+    background-color: color-mix(in lch longer hue, color percentage, color percentage);
+}
