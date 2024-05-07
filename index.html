@@ -3,11 +3,16 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Teachers:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -16,40 +21,42 @@
 
 <body>
 
+    <div class="tittle">
+        <h1>Calculator</h1>
+    </div>
+
     <div id="calculatorApp">
 
-        <div class="tittle">
-            <h1>Calculator</h1>
-        </div>
-
         <div class="calcScreen">
-            <span id="CalcDisplay">2500</span>
+            <div class="centralizeScreen">
+                <span id="calcDisplay">1000</span>
+                <div class="bottomDisplay">
+                    <div class="deleteButton">Del</div>
+                </div>
+            </div>
         </div>
 
         <div class="calcButtons">
-            <button>C</button>
-            <button> -/+ </button>
-            <button> % </button>
-            <button>/</button>
-            <br>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>X</button>
-            <br>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>-</button>
-            <br>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>+</button>
-            <br>
-            <button>0</button>
-            <button>,</button>
-            <button>=</button>
+            <button class="cleanButton">C</button>
+            <button class="MathSymbButton">( )</button>
+            <button class="MathSymbButton"> % </button>
+            <button class="MathSymbButton">&#247;</button>
+            <button class="numberButton">1</button>
+            <button class="numberButton">2</button>
+            <button class="numberButton">3</button>
+            <button class="MathSymbButton">&#215;</button>
+            <button class="numberButton">4</button>
+            <button class="numberButton">5</button>
+            <button class="numberButton">6</button>
+            <button class="MathSymbButton">&#8722</button>
+            <button class="numberButton">7</button>
+            <button class="numberButton">8</button>
+            <button class="numberButton">9</button>
+            <button class="MathSymbButton">&#43;</button>
+            <button class="MathSymbButton"> &#8722/&#43;</button>
+            <button class="numberButton">0</button>
+            <button class="MathSymbButton">,</button>
+            <button class="MathSymbButton">=</button>
         </div>
 
     </div>
