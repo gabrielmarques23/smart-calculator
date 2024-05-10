@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <script src="js/main.js" type="module" defer></script>
+
     <title>Smart Calculator</title>
 </head>
 
@@ -29,9 +31,11 @@
 
         <div class="calcScreen">
             <div class="centralizeScreen">
-                <span id="calcDisplay">1000</span>
+                <span id="calcDisplay"></span>
                 <div class="bottomDisplay">
-                    <div class="deleteButton">Del</div>
+                    <div class="deleteButton">
+                        <button>Del</button>
+                    </div>
                 </div>
             </div>
         </div>
