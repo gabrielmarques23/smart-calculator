@@ -79,6 +79,19 @@ body {
     align-items: center;
 }
 
+.deleteButton button {
+    background: transparent;
+}
+
+.deleteButton img {
+    width: 25px;
+    height: 25px;
+}
+
+.deleteButton img:hover {
+    cursor: pointer;
+}
+
 .calcButtons {
     display: flex;
     flex-wrap: wrap;
