@@ -1,17 +1,32 @@
 
 //const numberToCalc = document.querySelector('span#calcDisplay');
 
-let numberButton = document.querySelectorAll('.numberButton');
 let screen = document.querySelector('#calcDisplay'); //Ok
+let deleteButton = document.querySelector('.deleteButton button');
+let cleanButton = document.querySelector('.cleanButton');
+let numberButton = document.querySelectorAll('.numberButton');
+let selectedNumbers = '';
 
-//console.log(screen);
+//Click in the number buttons
 
-numberButton.forEach(button => {
-    button.addEventListener('click', function() {
-       let num = button.textContent;
-       screen.innerHTML += num;
-    })
-})
+function clickNumberButton(num) {
+    num.textContent;
+    selectedNumbers += num;
+    screen.innerHTML = selectedNumbers;
+}
+
+function deleteCharacter() {
+    selectedNumbers = selectedNumbers.slice(0, -1);
+    screen.textContent = selectedNumbers;
+}
+
+function cleanButtonClick() {
+    screen.textContent = '0';
+    selectedNumbers = '';
+}
+
+
+
 
 /*
 
