@@ -100,13 +100,20 @@ body {
 }
 
 .numberButton {
+    background: var(--Buttons-bg);
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-.MathSymbButton {
+.mathSymbButton{
+    background: var(--Buttons-bg);
     font-size: 1rem;
     font-weight: 500;
+}
+
+.resultButton{
+    background: var(--ButtonEqual-bg);
+    color: #fff;
 }
 
 .cleanButton {
@@ -118,7 +125,6 @@ body {
 
 .calcButtons button {
     font-family: var(--FontFamily-02);
-    background: var(--Buttons-bg);
     width: 2.9rem;
     height: 2.9rem;
     margin: .2rem;
