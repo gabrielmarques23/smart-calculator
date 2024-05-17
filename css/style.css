@@ -5,8 +5,11 @@
     --FontFamily-02: "Poppins", sans-serif;
     --Web-Bg: #C1CFE7;
 
-    --CalcScrLinear-01: #cddbf3;
-    --CalcScrLinear-02: #e6ebfa;
+    --BodyBgLinear-01: #91a9df;
+    --BodyBgLinear-02: #9caccf;
+
+    --CalcScrLinear-01: #c5d6f3;
+    --CalcScrLinear-02: #dee5fa;
 
     --CalcBgLinear-01: #9db3d6;
     --CalcBgLinear-02: #bbcceb;
@@ -26,6 +29,8 @@
 }
 
 body {
+    background-image: linear-gradient(to bottom, var(--BodyBgLinear-01), var(--BodyBgLinear-02));
+    background-attachment: fixed;
     font-weight: 300;
     font-family: var(--FontFamily-02);
 }
@@ -41,6 +46,7 @@ body {
     border-radius: 1rem;
     padding-bottom: .5rem;
     margin: auto;
+    box-shadow: 0 1rem 2rem -1rem #0000004d;
 }
 
 .calcScreen {
@@ -105,13 +111,13 @@ body {
     font-weight: 500;
 }
 
-.mathSymbButton{
+.mathSymbButton {
     background: var(--Buttons-bg);
     font-size: 1rem;
     font-weight: 500;
 }
 
-.resultButton{
+.resultButton {
     background: var(--ButtonEqual-bg);
     color: #fff;
 }
