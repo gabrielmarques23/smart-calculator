@@ -5,7 +5,7 @@
     --FontFamily-02: "Poppins", sans-serif;
     --Web-Bg: #C1CFE7;
 
-    --BodyBgLinear-01: #91a9df;
+    --BodyBgLinear-01: #97a7cc;
     --BodyBgLinear-02: #9caccf;
 
     --CalcScrLinear-01: #c5d6f3;
@@ -29,7 +29,8 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom, var(--BodyBgLinear-01), var(--BodyBgLinear-02));
+    background: url('../images/blue-lines.png') no-repeat center center, linear-gradient(to bottom, var(--BodyBgLinear-01), var(--BodyBgLinear-02));
+    background-size: cover;
     background-attachment: fixed;
     font-weight: 300;
     font-family: var(--FontFamily-02);
@@ -38,15 +39,15 @@ body {
 div.tittle {
     display: grid;
     justify-content: center;
-    margin: 0.5rem 1rem;
+    margin: 1rem 0rem 2rem 0rem;
 }
 
 .tittle h1 {
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
     border-radius: .6rem;
-    background: #93A9DC;
-    box-shadow: 7px 7px 17px #7b8eb9, -7px -7px 17px #abc4ff;
+    background: var(--BodyBgLinear-01);
+    box-shadow: 7px 7px 17px #7b8eb9, -7px -7px 17px #abc4ff93;
 }
 
 #calculatorApp {
@@ -58,6 +59,7 @@ div.tittle {
     width: 14.5rem;
     max-width: 14.5rem;
     height: 30rem;
+
     padding-bottom: .5rem;
     margin: auto;
     border-radius: 1rem;
