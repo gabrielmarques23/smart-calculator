@@ -35,17 +35,32 @@ body {
     font-family: var(--FontFamily-02);
 }
 
+div.tittle {
+    display: grid;
+    justify-content: center;
+    margin: 0.5rem 1rem;
+}
+
+.tittle h1 {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: .6rem;
+    background: #93A9DC;
+    box-shadow: 7px 7px 17px #7b8eb9, -7px -7px 17px #abc4ff;
+}
+
 #calculatorApp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-image: linear-gradient(to top, var(--CalcBgLinear-01), var(--CalcBgLinear-02) 40%);
     font-family: var(--FontFamily-01);
     width: 14.5rem;
     max-width: 14.5rem;
     height: 30rem;
-    display: grid;
-    align-content: stretch;
-    border-radius: 1rem;
     padding-bottom: .5rem;
     margin: auto;
+    border-radius: 1rem;
     box-shadow: 0 1rem 2rem -1rem #0000004d;
 }
 
@@ -55,7 +70,7 @@ body {
     height: 11.5rem;
     border-radius: 1rem;
     padding: 0 1rem;
-    overflow: hidden;
+    width: 100%;
 }
 
 .centralizeScreen {
@@ -64,16 +79,32 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
+}
+
+.calcDisplayWrapper {
+    width: 100%;
+    background: none;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
 }
 
 #calcDisplay {
     font-size: 2rem;
-    width: 100%;
-    text-align: right;
     background: none;
     border-block: none;
     outline: none;
+}
+
+.overflowCount {
+    position: absolute;
+    top: 6.5rem;
+    right: 0.5rem;
+    font-size: .8rem;
+    font-weight: 900;
+    color: red;
+    display: none;
 }
 
 .bottomDisplay {
