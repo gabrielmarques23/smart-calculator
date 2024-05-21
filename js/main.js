@@ -38,6 +38,32 @@ function decimal() {
     updateExpression()
 }
 
+function putParentheses() {
+    let openParentheses = (expression.match(/\(/g) || []).length;
+    let closeParentheses = (expression.match(/\)/g) || []).length;
+    if (openParentheses > closeParentheses) {
+        expression += ')';
+        displayExpression += ')';
+    } else {
+        expression += '(';
+        displayExpression += '(';
+    }
+    updateExpression()
+}
+
+function signs() {
+    if (expression !== '') {
+        let lastNumberMatch = expression.match(/(-?\d+\.?\d*)$/);
+        if (lastNumberMatch) {
+            let lastNumber = lastNumberMatch[0];
+            let toggledNumber = lastNumber.startsWith('-') ? lastNumber.slice(1) : '-' + lastNumber;
+            expression = expression.replace(/(-?\d+\.?\d*)$/, toggledNumber);
+            displayExpression = displayExpression.replace(/(-?\d+\.?\d*)$/, toggledNumber);
+            updateExpression()
+        }
+    }
+}
+
 function clickNumberButton(num) {
     expression += num;
     displayExpression += num;
@@ -70,3 +96,4 @@ function resultButton() {
         }
     }
 }
+
