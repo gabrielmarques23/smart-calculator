@@ -25,6 +25,10 @@
 
     <div class="tittle">
         <h1>Calculator</h1>
+        <label class="toggleButton">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
     </div>
 
     <div id="calculatorApp">
@@ -37,8 +41,10 @@
                 </div>
                 <div class="bottomDisplay">
                     <div class="deleteButton">
-                        <button onclick="deleteCharacter()"><img
-                                src="./images/icons/backspace-button-light.png"></button>
+                        <button onclick="deleteCharacter()">
+                            <img src="./images/icons/backspace-button-light.png"></button>
+
+                        <img class="dark-Mode-img" src="images/icons/backspace-button-dark.png" alt="">
                     </div>
                 </div>
             </div>
