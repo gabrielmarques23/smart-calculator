@@ -97,3 +97,29 @@ function resultButton() {
     }
 }
 
+function changeTheme() {
+    const checkBox = document.getElementById('themeToggle');
+    const body = document.querySelector('body');
+    const tittleH1 = document.querySelector('.tittle h1');
+    const calculator = document.getElementById('calculatorApp');
+    const calculatorScreen = document.querySelector('.calcScreen');
+    const calculatorDisplay = document.getElementById('calcDisplay');
+    const calculatorBottomDisplay = document.querySelector('.bottomDisplay');
+
+    if (checkBox.checked) {
+        body.classList.add('dark-Mode');
+        tittleH1.classList.add('dark-Mode');
+        calculator.classList.add('dark-Mode');
+        calculatorScreen.classList.add('dark-Mode');
+        calculatorDisplay.classList.add('dark-Mode');
+        calculatorBottomDisplay.classList.add('dark-Mode');
+
+    } else {
+        body.classList.remove('dark-Mode');
+        tittleH1.classList.remove('dark-Mode');
+        calculator.classList.remove('dark-Mode');
+        calculatorScreen.classList.remove('dark-Mode');
+        calculatorDisplay.classList.remove('dark-Mode');
+        calculatorBottomDisplay.classList.remove('dark-Mode');
+    }
+}
