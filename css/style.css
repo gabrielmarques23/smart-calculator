@@ -26,13 +26,13 @@
     --FontFamily-02: "Poppins", sans-serif;
 
     --BodyBgLinear-03: #465779;
-    --BodyBgLinear-04: #9caccf;
+    --BodyBgLinear-04: #465779;
 
     --CalcScrLinear-03: #21272A;
-    --CalcScrLinear-04: ;
+    --CalcScrLinear-04: #21272A;
 
-    --CalcBgLinear-03: #21272A;
-    --CalcBgLinear-04: ;
+    --CalcBgLinear-03: #1c2530;
+    --CalcBgLinear-04: #223142;
 
     --Symbols-color-dark: var(--Bg-buttonEqual);
     --ButtonEqual-bg-dark: #7da2e9;
@@ -57,13 +57,15 @@ body {
 }
 
 body.dark-Mode {
-    background: url('../images/blue-lines.png') no-repeat center center, linear-gradient(to bottom, var(--BodyBgLinear-03), var());
+    background: url('../images/blue-lines.png') no-repeat center center, linear-gradient(to bottom, var(--BodyBgLinear-03), var(--BodyBgLinear-04));
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 div.tittle {
     display: grid;
     justify-content: center;
-    margin: 1rem 0rem 2rem 0rem;
+    margin: 1rem 0rem;
 }
 
 .tittle h1 {
@@ -76,7 +78,9 @@ div.tittle {
 }
 
 .tittle h1.dark-Mode {
-    color: var(--Number-color-dark)
+    color: var(--Number-color-dark);
+    background: var(--BodyBgLinear-03);
+    box-shadow: 7px 7px 17px #485c88d5, -7px -7px 17px #25325275;
 }
 
 #calculatorApp {
@@ -150,7 +154,7 @@ div.tittle {
     display: none;
 }
 
-.bottomDisplay {
+div.bottomDisplay {
     display: flex;
     height: 2.5rem;
     width: 100%;
@@ -159,8 +163,7 @@ div.tittle {
     align-items: center;
 }
 
-.bottomDisplay.darkMode {
-    /*CASO NÃO FOR, COLOCAR A TAG DA CLASSE PRINCIPAL*/
+div.bottomDisplay .darkMode {
     border-top: .1rem solid var(--CalcScrLinear-04);
 }
 
@@ -194,7 +197,8 @@ div.tittle {
     font-size: 1.2rem;
     font-weight: 500;
 }
-.numberButton.dark-Mode{
+
+.numberButton .dark-Mode {
     background: var(--Buttons-bg-dark);
 }
 
@@ -203,7 +207,8 @@ div.tittle {
     font-size: 1rem;
     font-weight: 500;
 }
-.mathSymbButton.dark-Mode{
+
+.mathSymbButton.dark-Mode {
     background: var(--Buttons-bg-dark)
 }
 
@@ -211,7 +216,8 @@ div.tittle {
     background: var(--ButtonEqual-bg);
     color: #fff;
 }
-.resultButton .dark-Mode{
+
+.resultButton .dark-Mode {
     background: var(--ButtonEqual-bg-dark);
 }
 
@@ -221,7 +227,8 @@ div.tittle {
     font-size: 1.5rem;
     font-weight: 500;
 }
-.cleanButton .dark-Mode{
+
+.cleanButton .dark-Mode {
     background: var(--Buttons-bg-dark)
 }
 
