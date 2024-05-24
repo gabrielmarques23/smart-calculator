@@ -22,58 +22,62 @@
 </head>
 
 <body>
-
-    <div class="tittle">
-        <h1>Calculator</h1>
-        <label class="toggleButton" for="themeToggle">
-            <input id="themeToggle" type="checkbox" onclick="changeTheme()">
-            <span class="slider"></span>
-        </label>
-    </div>
-
-    <div id="calculatorApp">
-
-        <div class="calcScreen">
-            <div class="centralizeScreen">
-                <div class="calcDisplayWrapper">
-                    <span id="calcDisplay"></span>
-                    <span class="overflowCount">0</span>
-                </div>
-                <div class="bottomDisplay">
-                    <div class="deleteButton">
-                        <button onclick="deleteCharacter()">
-                            <img src="./images/icons/backspace-button-light.png"></button>
-
-                        <img class="dark-Mode-img" src="images/icons/backspace-button-dark.png" alt="">
+<div id="centralizeContainer">
+    
+        <div class="tittle">
+            <h1>Calculator</h1>
+    
+            <div class="toggleSwitch">
+                <input class="toggleInput" id="themeToggle" type="checkbox" onclick="changeTheme()">
+                <label class="toggleLabel" for="themeToggle"></label>
+            </div>
+        </div>
+    
+    
+        <div id="calculatorApp">
+    
+            <div class="calcScreen">
+                <div class="centralizeScreen">
+                    <div class="calcDisplayWrapper">
+                        <span id="calcDisplay"></span>
+                        <span class="overflowCount">0</span>
+                    </div>
+                    <div class="bottomDisplay">
+                        <div class="deleteButton">
+                            <button onclick="deleteCharacter()">
+                                <img class="light-Mode-img" src="./images/icons/backspace-button-light.png">
+                                <img class="dark-Mode-img" src="images/icons/backspace-button-dark.png">
+                            </button>
+    
+                        </div>
                     </div>
                 </div>
             </div>
+    
+            <div class="calcButtons">
+                <button class="cleanButton" onclick="cleanButtonClick()">C</button>
+                <button class="mathSymbButton" onclick="putParentheses()">( )</button>
+                <button class="mathSymbButton" onclick="percentual()"> % </button>
+                <button class="mathSymbButton" onclick="division()">÷</button>
+                <button class="numberButton" onclick="clickNumberButton(1)">1</button>
+                <button class="numberButton" onclick="clickNumberButton(2)">2</button>
+                <button class="numberButton" onclick="clickNumberButton(3)">3</button>
+                <button class="mathSymbButton" onclick="multiplication()">×</button>
+                <button class="numberButton" onclick="clickNumberButton(4)">4</button>
+                <button class="numberButton" onclick="clickNumberButton(5)">5</button>
+                <button class="numberButton" onclick="clickNumberButton(6)">6</button>
+                <button class="mathSymbButton" onclick="subtraction()">-</button>
+                <button class="numberButton" onclick="clickNumberButton(7)">7</button>
+                <button class="numberButton" onclick="clickNumberButton(8)">8</button>
+                <button class="numberButton" onclick="clickNumberButton(9)">9</button>
+                <button class="mathSymbButton" onclick="addition()">+</button>
+                <button class="mathSymbButton" onclick="signs()"> +/- </button>
+                <button class="numberButton" onclick="clickNumberButton(0)">0</button>
+                <button class="mathSymbButton" onclick="decimal()">.</button>
+                <button class="resultButton" onclick="resultButton()">=</button>
+            </div>
         </div>
-
-        <div class="calcButtons">
-            <button class="cleanButton" onclick="cleanButtonClick()">C</button>
-            <button class="mathSymbButton" onclick="putParentheses()">( )</button>
-            <button class="mathSymbButton" onclick="percentual()"> % </button>
-            <button class="mathSymbButton" onclick="division()">÷</button>
-            <button class="numberButton" onclick="clickNumberButton(1)">1</button>
-            <button class="numberButton" onclick="clickNumberButton(2)">2</button>
-            <button class="numberButton" onclick="clickNumberButton(3)">3</button>
-            <button class="mathSymbButton" onclick="multiplication()">×</button>
-            <button class="numberButton" onclick="clickNumberButton(4)">4</button>
-            <button class="numberButton" onclick="clickNumberButton(5)">5</button>
-            <button class="numberButton" onclick="clickNumberButton(6)">6</button>
-            <button class="mathSymbButton" onclick="subtraction()">-</button>
-            <button class="numberButton" onclick="clickNumberButton(7)">7</button>
-            <button class="numberButton" onclick="clickNumberButton(8)">8</button>
-            <button class="numberButton" onclick="clickNumberButton(9)">9</button>
-            <button class="mathSymbButton" onclick="addition()">+</button>
-            <button class="mathSymbButton" onclick="signs()"> +/- </button>
-            <button class="numberButton" onclick="clickNumberButton(0)">0</button>
-            <button class="mathSymbButton" onclick="decimal()">.</button>
-            <button class="resultButton" onclick="resultButton()">=</button>
-        </div>
-
-    </div>
+</div>
 
 </body>
 
