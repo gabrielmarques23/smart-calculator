@@ -25,18 +25,18 @@
     --FontFamily-01: "Teachers", sans-serif;
     --FontFamily-02: "Poppins", sans-serif;
 
-    --BodyBgLinear-03: #465779;
-    --BodyBgLinear-04: #465779;
+    --BodyBgLinear-03: #182f4d;
+    --BodyBgLinear-04: #193253;
 
-    --CalcScrLinear-03: #21272A;
-    --CalcScrLinear-04: #21272A;
+    --CalcScrLinear-03: #0e2b4e;
+    --CalcScrLinear-04: #0b284b;
 
-    --CalcBgLinear-03: #1c2530;
-    --CalcBgLinear-04: #223142;
+    --CalcBgLinear-03: #051d38;
+    --CalcBgLinear-04: #031f41;
 
     --Symbols-color-dark: var(--Bg-buttonEqual);
-    --ButtonEqual-bg-dark: #7da2e9;
-    --Buttons-bg-dark: #21272A;
+    --ButtonEqual-bg-dark: #6087ac;
+    --Buttons-bg-dark: #132e44;
     --Number-color-dark: #fff;
 }
 
@@ -60,27 +60,44 @@ body.dark-Mode {
     background: url('../images/blue-lines.png') no-repeat center center, linear-gradient(to bottom, var(--BodyBgLinear-03), var(--BodyBgLinear-04));
     background-size: cover;
     background-attachment: fixed;
+    height: 100vh;
 }
 
-div.tittle {
+#centralizeContainer {
+    max-width: 900px;
+    margin: 0 auto;
     display: grid;
     justify-content: center;
+    align-content: center;
+}
+
+.tittle {
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 1rem 0rem;
+    border-radius: .6rem;
+    background: var(--BodyBgLinear-01);
+    box-shadow:  8px 8px 31px #5f6981,
+    -8px -8px 31px #cfe5ff;
+}
+
+.tittle.dark-Mode {
+    background: var(--BodyBgLinear-03);
+    box-shadow:  8px 8px 31px #0e1731,
+    -8px -8px 31px #20336b;
 }
 
 .tittle h1 {
     color: var(--Number-color);
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
-    border-radius: .6rem;
-    background: var(--BodyBgLinear-01);
-    box-shadow: 7px 7px 17px #7b8eb9, -7px -7px 17px #abc4ff93;
 }
 
 .tittle h1.dark-Mode {
     color: var(--Number-color-dark);
-    background: var(--BodyBgLinear-03);
-    box-shadow: 7px 7px 17px #485c88d5, -7px -7px 17px #25325275;
+}
 }
 
 #calculatorApp {
@@ -163,22 +180,34 @@ div.bottomDisplay {
     align-items: center;
 }
 
-div.bottomDisplay .darkMode {
-    border-top: .1rem solid var(--CalcScrLinear-04);
+.bottomDisplay.dark-Mode {
+    border-top: .1rem solid var(--CalcBgLinear-04);
 }
 
 .deleteButton button {
     background: transparent;
 }
 
-.deleteButton img {
+img.light-Mode-img {
+    /*.light-Mode-img*/
     width: 25px;
     height: 25px;
     display: block;
 }
 
-.deleteButton img.dark-Mode-img { /*Lembrar de add o display block*/
+.light-Mode-img.removeImg {
     display: none;
+}
+
+img.dark-Mode-img {
+    /*Lembrar de add o display block*/
+    width: 25px;
+    height: 25px;
+    display: none;
+}
+
+.dark-Mode-img.showImg {
+    display: block;
 }
 
 .deleteButton img:hover {
@@ -193,23 +222,29 @@ div.bottomDisplay .darkMode {
 }
 
 .numberButton {
+    color: var(--Number-color);
     background: var(--Buttons-bg);
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-.numberButton .dark-Mode {
+.numberButton.dark-Mode {
+    color: var(--Number-color-dark);
     background: var(--Buttons-bg-dark);
+    font-weight: 400;
 }
 
 .mathSymbButton {
+    color: var(--Number-color);
     background: var(--Buttons-bg);
     font-size: 1rem;
     font-weight: 500;
 }
 
 .mathSymbButton.dark-Mode {
-    background: var(--Buttons-bg-dark)
+    color: var(--Number-color-dark);
+    background: var(--Buttons-bg-dark);
+    font-weight: 400;
 }
 
 .resultButton {
@@ -217,7 +252,7 @@ div.bottomDisplay .darkMode {
     color: #fff;
 }
 
-.resultButton .dark-Mode {
+.resultButton.dark-Mode {
     background: var(--ButtonEqual-bg-dark);
 }
 
@@ -228,8 +263,8 @@ div.bottomDisplay .darkMode {
     font-weight: 500;
 }
 
-.cleanButton .dark-Mode {
-    background: var(--Buttons-bg-dark)
+.cleanButton.dark-Mode {
+    background: var(--Buttons-bg-dark);
 }
 
 .calcButtons button {
