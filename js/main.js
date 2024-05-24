@@ -100,26 +100,56 @@ function resultButton() {
 function changeTheme() {
     const checkBox = document.getElementById('themeToggle');
     const body = document.querySelector('body');
+    const tittle = document.querySelector('.tittle');
     const tittleH1 = document.querySelector('.tittle h1');
     const calculator = document.getElementById('calculatorApp');
     const calculatorScreen = document.querySelector('.calcScreen');
     const calculatorDisplay = document.getElementById('calcDisplay');
-    const calculatorBottomDisplay = document.querySelector('.bottomDisplay');
+    const calculatorBottomDisplay = document.querySelector('div.bottomDisplay');
+    const lightModeImg = document.querySelector('img.light-Mode-img');
+    const darkModeImg = document.querySelector('img.dark-Mode-img');
+    const numberButtons = document.querySelectorAll('.numberButton');
+    const mathSymbolButtons = document.querySelectorAll('.mathSymbButton');
+    const cleanButton = document.querySelector('.cleanButton');
+    const resultButton = document.querySelector('.resultButton');
 
     if (checkBox.checked) {
         body.classList.add('dark-Mode');
+        tittle.classList.add('dark-Mode');
         tittleH1.classList.add('dark-Mode');
         calculator.classList.add('dark-Mode');
         calculatorScreen.classList.add('dark-Mode');
         calculatorDisplay.classList.add('dark-Mode');
         calculatorBottomDisplay.classList.add('dark-Mode');
+        lightModeImg.classList.add('removeImg');
+        darkModeImg.classList.add('showImg');
+        cleanButton.classList.add('dark-Mode');
+        resultButton.classList.add('dark-Mode');
 
+        numberButtons.forEach(button => {
+            button.classList.add('dark-Mode');
+        })
+        mathSymbolButtons.forEach(button => {
+            button.classList.add('dark-Mode');
+        })
     } else {
         body.classList.remove('dark-Mode');
+        tittle.classList.remove('dark-Mode');
         tittleH1.classList.remove('dark-Mode');
         calculator.classList.remove('dark-Mode');
         calculatorScreen.classList.remove('dark-Mode');
         calculatorDisplay.classList.remove('dark-Mode');
         calculatorBottomDisplay.classList.remove('dark-Mode');
+        lightModeImg.classList.remove('removeImg');
+        darkModeImg.classList.remove('showImg');
+        cleanButton.classList.remove('dark-Mode');
+        resultButton.classList.remove('dark-Mode');
+
+        numberButtons.forEach(button => {
+            button.classList.remove('dark-Mode');
+        })
+        mathSymbolButtons.forEach(button => {
+            button.classList.remove('dark-Mode');
+        })
     }
 }
