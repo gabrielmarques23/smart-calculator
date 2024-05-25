@@ -63,6 +63,14 @@ body.dark-Mode {
     height: 100vh;
 }
 
+button, img {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+    touch-action: manipulation;
+}
+
 #centralizeContainer {
     max-width: 900px;
     margin: 0 auto;

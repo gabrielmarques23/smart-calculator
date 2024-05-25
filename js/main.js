@@ -86,9 +86,11 @@ function resultButton() {
     if (expression !== '') {
         try {
             let result = eval(expression.replace(/(\d+)%/g, ' $1/100 '));
+            result= parseFloat(result.toFixed(2));
             screen.textContent = result;
             expression = result.toString();
             displayExpression = expression;
+            updateExpression()
         } catch (e) {
             screen.textContent = 'Error';
             expression = '';
@@ -106,8 +108,8 @@ function changeTheme() {
     const calculatorScreen = document.querySelector('.calcScreen');
     const calculatorDisplay = document.getElementById('calcDisplay');
     const calculatorBottomDisplay = document.querySelector('div.bottomDisplay');
-    const lightModeImg = document.querySelector('img.light-Mode-img');
-    const darkModeImg = document.querySelector('img.dark-Mode-img');
+    const lightModeImg = document.querySelector('.light-Mode-img');
+    const darkModeImg = document.querySelector('.dark-Mode-img');
     const numberButtons = document.querySelectorAll('.numberButton');
     const mathSymbolButtons = document.querySelectorAll('.mathSymbButton');
     const cleanButton = document.querySelector('.cleanButton');
@@ -153,3 +155,11 @@ function changeTheme() {
         })
     }
 }
+
+//Prevention on mobiles
+document.addEventListener('gesturestart', (e) => {
+    e.preventDefault();
+})
+document.addEventListener('dbclick', (e) => {
+    e.preventDefault();
+})
