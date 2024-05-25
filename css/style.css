@@ -79,14 +79,14 @@ body.dark-Mode {
     margin: 1rem 0rem;
     border-radius: .6rem;
     background: var(--BodyBgLinear-01);
-    box-shadow:  8px 8px 31px #5f6981,
-    -8px -8px 31px #cfe5ff;
+    box-shadow: 8px 8px 31px #5f6981,
+        -8px -8px 31px #cfe5ff;
 }
 
 .tittle.dark-Mode {
     background: var(--BodyBgLinear-03);
-    box-shadow:  8px 8px 31px #0e1731,
-    -8px -8px 31px #20336b;
+    box-shadow: 8px 8px 31px #0e1731,
+        -8px -8px 31px #20336b;
 }
 
 .tittle h1 {
@@ -229,17 +229,7 @@ body.dark-Mode {
     color: var(--Number-color-dark);
 }
 
-.overflowCount {
-    position: absolute;
-    top: 6.5rem;
-    right: 0.5rem;
-    font-size: .8rem;
-    font-weight: 900;
-    color: red;
-    display: none;
-}
-
-div.bottomDisplay {
+.bottomDisplay {
     display: flex;
     height: 2.5rem;
     width: 100%;
