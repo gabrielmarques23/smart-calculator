@@ -74,6 +74,7 @@ function deleteCharacter() {
     expression = expression.slice(0, -1);
     displayExpression = displayExpression.slice(0, -1);
     updateExpression();
+    
 }
 
 function cleanButtonClick() {
@@ -86,7 +87,10 @@ function resultButton() {
     if (expression !== '') {
         try {
             let result = eval(expression.replace(/(\d+)%/g, ' $1/100 '));
-            result= parseFloat(result.toFixed(2));
+            if (!isFinite(result)){
+                throw new Error('Resultado infinito')
+            }
+            result = parseFloat(result.toFixed(2));
             screen.textContent = result;
             expression = result.toString();
             displayExpression = expression;
